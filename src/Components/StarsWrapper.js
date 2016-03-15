@@ -6,7 +6,7 @@ var Helpers = require('../Utils/Helpers');
 var StarsWrapper = React.createClass({
   getDefaultProps: function() {
     return {
-      numberOfStars: 5000
+      numberOfStars: 2000
     };
   },
   renderStars: function(){
