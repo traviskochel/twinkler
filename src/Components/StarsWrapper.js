@@ -5,7 +5,7 @@ var Star = require('./Star');
 var StarsWrapper = React.createClass({
   getDefaultProps: function() {
     return {
-      numberOfStars: 600
+      numberOfStars: 2000
     };
   },
   renderStars: function(){
