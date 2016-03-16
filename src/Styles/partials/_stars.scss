@@ -27,3 +27,20 @@
       animation: twinkler #{$duration}s linear infinite alternate;
   }
 }
+
+
+
+.stars--nebula {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+      to top right, 
+      $color-red, $color-blue
+    );
+  opacity: .06;
+  z-index: 0;
+  
+}

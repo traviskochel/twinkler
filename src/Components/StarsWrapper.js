@@ -2,6 +2,7 @@ var React = require('react');
 var _ = require('underscore');
 var Star = require('./Star');
 var Helpers = require('../Utils/Helpers');
+var Nebula = require('./Nebula');
 
 var StarsWrapper = React.createClass({
   getDefaultProps: function() {
@@ -25,6 +26,7 @@ var StarsWrapper = React.createClass({
     return (
       <div className='stars--wrapper'>
         {this.renderStars()}
+        <Nebula />
       </div>
     );
   }
