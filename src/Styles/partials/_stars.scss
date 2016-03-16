@@ -21,14 +21,17 @@
   // animation: twinkler .5s linear infinite alternate;
 }
 
-@for $i from 0 through 11 {
-  $duration: ($i / 11 * 10) + .4;
+@for $i from 0 through 9 {
+  $duration: ($i / 9 * 10) + .4;
   .stars--star-#{$i} {
       animation: twinkler #{$duration}s linear infinite alternate;
   }
 }
 
-
+@keyframes nebula-fader {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
 
 .stars--nebula {
   position: absolute;
@@ -40,7 +43,22 @@
       to top right, 
       $color-red, $color-blue
     );
-  opacity: .06;
+  opacity: .05;
   z-index: 0;
+
+  &:before {
+    background-image: linear-gradient(
+        to top right, 
+        $color-purple, $color-teal
+      );
+    content: '';    
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    animation: nebula-fader 20s linear infinite alternate;
+  }
   
 }
